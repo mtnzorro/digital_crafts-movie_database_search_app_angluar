@@ -1,0 +1,18 @@
+<a ui-sref="search_view">Search Again</a>
+<h1 class="nav">{{results.title}}</h1>
+<div class="poster">
+<img ng-if="results.backdrop_path" src="https://image.tmdb.org/t/p/w500/{{results.backdrop_path}}" alt="" />
+<img ng-hide="results.backdrop_path" src="https://image.tmdb.org/t/p/w500/{{results.poster_path}}" alt="" />
+</div>
+<div class="overview">
+<p>{{results.overview}}</p>
+</div>
+<a href="{{results.homepage}}">{{results.homepage}}</a>
+<p>Runtime: {{results.runtime}} minutes</p>
+<p>Release date: {{results.release_date}}</p>
+<div class="">
+  <p>Genres:</p>
+  <ul ng-repeat="genre in genres">
+    <li>{{genre.name}}</li>
+  </ul>
+</div>

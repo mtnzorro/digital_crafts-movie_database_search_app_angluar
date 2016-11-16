@@ -1,0 +1,17 @@
+
+
+
+<div class="results_wrap">
+
+
+<div class="movie_pic">
+  <span ng-repeat="result in results">
+  <a ui-sref="info_view({page_name: {{result.id}}})">
+      <img class="movie_search_img" ng-if="result.poster_path" ng-src="https://image.tmdb.org/t/p/w185/{{result.poster_path}}">
+      <!-- <figcaption>{{result.title}}</figcaption> -->
+  </a>
+</span>
+  <!-- other anchors here ... -->
+
+</div>
+</div>

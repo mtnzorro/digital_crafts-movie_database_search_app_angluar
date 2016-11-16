@@ -1,0 +1,42 @@
+body{
+  font-family: 'Russo One', sans-serif;
+  background-color: lightgrey;
+}
+.search_bar{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+    font-family: 'Russo One', sans-serif;
+}
+
+.search_bar input{
+  font-size: 40px;
+  color: dodgerblue
+}
+
+.nav{
+  text-align: center;
+}
+.nav h1{
+  font-size: 40px;
+}
+
+h2{
+  margin: 0, 5px, 0, 0;
+
+}
+
+.movie_search_img{
+  margin: 2px
+}
+
+.movie_pic{
+  display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+}
+
+.results_wrap{
+  display: inline-block;
+  text-align: center;
+}
