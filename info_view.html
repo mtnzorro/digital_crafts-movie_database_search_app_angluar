@@ -1,13 +1,16 @@
-<a ui-sref="search_view">Search Again</a>
+<form class="search_bar" ng-submit="search_call()" method="post">
+  <input type="search" ng-model="movieName"  placeholder="Search movies">
+</form>
+<button ui-sref="search_view" ng-click="now_is_Playing()" type="button" name="button">Now Playing</button>
+<button id="pop_button" ng-click="getPopular()" type="button" name="button">Most Popular</button>
+<button id="kids_button" ng-click="getKids()" type="button" name="button">Popular for Kids</button>
+<button id="upcoming_button" ng-click="getUpcoming()" type="button" name="button">Coming Soon</button>
 <h1 class="nav">{{results.title}}</h1>
-<div class="poster">
-<img ng-if="results.backdrop_path" src="https://image.tmdb.org/t/p/w500/{{results.backdrop_path}}" alt="" />
-<img ng-hide="results.backdrop_path" src="https://image.tmdb.org/t/p/w500/{{results.poster_path}}" alt="" />
-</div>
+
+<div class="info_page_flex">
 <div class="overview">
 <p>{{results.overview}}</p>
-</div>
-<a href="{{results.homepage}}">{{results.homepage}}</a>
+<p><a href="{{results.homepage}}">{{results.homepage}}</a></p>
 <p>Runtime: {{results.runtime}} minutes</p>
 <p>Release date: {{results.release_date}}</p>
 <div class="">
@@ -15,4 +18,10 @@
   <ul ng-repeat="genre in genres">
     <li>{{genre.name}}</li>
   </ul>
+</div>
+</div>
+<div class="poster">
+<img ng-if="results.backdrop_path" src="https://image.tmdb.org/t/p/w500/{{results.backdrop_path}}" alt="" />
+<img ng-hide="results.backdrop_path" src="https://image.tmdb.org/t/p/w500/{{results.poster_path}}" alt="" />
+</div>
 </div>

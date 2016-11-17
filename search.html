@@ -1,20 +1,24 @@
 <form class="search_bar" ng-submit="search_call()" method="post">
   <input type="search" ng-model="movieName"  placeholder="Search movies">
 </form>
-
-<div class="results_wrap">
-
-<h2>Now Playing:</h2>
-<div class="movie_pic">
-
-  <span ng-repeat="result in results">
-  <a ui-sref="info_view({page_name: {{result.id}}})">
-
-      <img class="movie_search_img" ng-if="result.poster_path" ng-src="https://image.tmdb.org/t/p/w185/{{result.poster_path}}">
-      <!-- <figcaption>{{result.title}}</figcaption> -->
-  </a>
-</span>
-  <!-- other anchors here ... -->
-
+<div class="buttons_wrapper">
+<button ui-sref="search_view" ng-click="now_is_Playing()" type="button" name="button">Now Playing</button>
+<button id="pop_button" ui-sref="popular_page" type="button" name="button">Most Popular</button>
+<button id="kids_button" ui-sref="kids_page" type="button" name="button">Popular for Kids</button>
+<button id="upcoming_button" ui-sref="upcoming_page" type="button" name="button">Coming Soon</button>
 </div>
+<div class="results_wrap">
+  <div class="now_playing_results">
+
+    <span ng-repeat="result in results">
+
+      <a ui-sref="info_view({page_name: {{result.id}}})">
+          <img class="now_playing_img" ng-if="result.backdrop_path" ng-src="https://image.tmdb.org/t/p/w300/{{result.backdrop_path}}">
+          <figcaption>{{result.title}}</figcaption>
+      </a>
+    </span>
+
+    <!-- other anchors here ... -->
+
+  </div>
 </div>

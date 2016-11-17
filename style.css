@@ -1,24 +1,30 @@
 body{
   font-family: 'Russo One', sans-serif;
   background-color: lightgrey;
+  margin: 0
 }
 .search_bar{
   text-align: center;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-bottom: 20px;
-    font-family: 'Russo One', sans-serif;
+  font-family: 'Russo One', sans-serif;
 }
 
 .search_bar input{
-  font-size: 40px;
+  margin-top: 0px;
+  font-size: 30px;
   color: dodgerblue
 }
 
 .nav{
   text-align: center;
+  background-color: grey;
+  margin-top: 0;
 }
 .nav h1{
   font-size: 40px;
+  margin-top: 0px;
+  margin-bottom: 5px;
 }
 
 h2{
@@ -38,5 +44,44 @@ h2{
 
 .results_wrap{
   display: inline-block;
+  text-align: center;
+}
+.now_playing_results{
+  display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+}
+figcaption{
+  font-size: 12px;
+}
+
+.now_playing_img{
+  height: 260;
+  width: 600
+}
+button{
+  margin-bottom: 5px;
+  /*margin-left: 48px;*/
+  font-family: 'Russo One', sans-serif;
+  border-radius: 5px
+}
+.info_page_flex{
+  display: flex;
+}
+.overview p{
+  margin-top: 0;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+
+.poster{
+  margin-left: 10px;
+  margin-right: 10px
+}
+#pop_button, #kids_button, #upcoming_button{
+  margin-left: 0;
+}
+
+.buttons_wrapper{
   text-align: center;
 }
